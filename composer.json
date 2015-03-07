@@ -16,13 +16,6 @@
         }
     ],
 
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/mcenirm/jsonselect-php"
-        }
-    ],
-
     "require": {
         "php": ">=5.4",
         "behat/behat": "~3.0",

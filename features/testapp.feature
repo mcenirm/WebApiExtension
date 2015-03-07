@@ -227,3 +227,30 @@ Feature: Test app verification
 
       1 scenario (1 passed)
       """
+
+  Scenario: Matching with JSONSelect
+    Given a file named "features/jsonselect.feature" with:
+      """
+      Feature: Exercise WebApiContext JSONSelect matching
+        In order to validate the JSONSelect matching step
+        As a context developer
+        I need to be able to match a response against a JSONSelect expression
+
+        Scenario:
+          Given I set header "content-type" with value "application/json"
+          When I send a POST request to "echo" with body:
+          '''
+          ["test"]
+          '''
+          And the response should match JSONSelect:
+          '''
+          :val("test")
+          '''
+      """
+    When I run "behat features/jsonselect.feature"
+    Then it should pass with:
+      """
+      ...
+
+      1 scenario (1 passed)
+      """

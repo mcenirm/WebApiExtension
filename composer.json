@@ -16,11 +16,19 @@
         }
     ],
 
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mcenirm/jsonselect-php"
+        }
+    ],
+
     "require": {
         "php": ">=5.4",
         "behat/behat": "~3.0",
         "guzzlehttp/guzzle": "4.*",
-        "phpunit/phpunit": "~4.0"
+        "phpunit/phpunit": "~4.0",
+        "mcenirm/jsonselect-php": "dev-feature/as_composer_package"
     },
 
     "require-dev": {

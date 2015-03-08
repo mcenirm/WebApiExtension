@@ -15,6 +15,7 @@ use Behat\Gherkin\Node\TableNode;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use PHPUnit_Framework_Assert as Assertions;
+use \JSONSelect as JSONSelect;
 
 /**
  * Provides web API description definitions.
@@ -265,7 +266,7 @@ class WebApiContext implements ApiClientAwareContext
      */
     public function theResponseShouldMatchJsonSelect(PyStringNode $jsonSelectString)
     {
-        $jsonSelect = new \JSONSelect($this->replacePlaceHolder($jsonSelectString->getRaw()));
+        $jsonSelect = new JSONSelect($this->replacePlaceHolder($jsonSelectString->getRaw()));
         $responseJson = json_decode($this->response->getBody());
         $matches = $jsonSelect->match($responseJson);
 

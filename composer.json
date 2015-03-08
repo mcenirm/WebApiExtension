@@ -19,7 +19,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/mcenirm/jsonselect-php.git"
+            "url": "https://github.com/mcenirm/jsonselect-php"
         }
     ],
 

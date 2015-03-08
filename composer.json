@@ -1,5 +1,5 @@
 {
-    "name": "behat/web-api-extension",
+    "name": "mcenirm/web-api-extension",
     "type": "behat-extension",
     "description": "Web API extension for Behat",
     "keywords": ["api", "test"],
@@ -19,7 +19,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/mcenirm/jsonselect-php"
+            "url": "https://github.com/mcenirm/jsonselect-php.git"
         }
     ],
 

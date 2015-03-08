@@ -265,7 +265,7 @@ class WebApiContext implements ApiClientAwareContext
      */
     public function theResponseShouldMatchJsonSelect(PyStringNode $jsonSelectString)
     {
-        $jsonSelect = new JSONSelect($this->replacePlaceHolder($jsonSelectString->getRaw()));
+        $jsonSelect = new \JSONSelect($this->replacePlaceHolder($jsonSelectString->getRaw()));
         $responseJson = json_decode($this->response->getBody());
         $matches = $jsonSelect->match($responseJson);
 

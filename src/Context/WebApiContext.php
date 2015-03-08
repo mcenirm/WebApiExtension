@@ -15,7 +15,6 @@ use Behat\Gherkin\Node\TableNode;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use PHPUnit_Framework_Assert as Assertions;
-use JSONSelect;
 
 /**
  * Provides web API description definitions.
